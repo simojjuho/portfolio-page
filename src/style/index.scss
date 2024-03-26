@@ -1,0 +1,6 @@
+@use "variables/fonts";
+
+* {
+  margin: 0;
+  font-family: fonts.$main-font;
+}
