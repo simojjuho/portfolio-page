@@ -1,12 +1,7 @@
-interface HomeProps {
+import Link from "../shared/components/Link"
 
-}
-
-const Home = ({}: HomeProps) => (
-  <>
-    <h1>React TS FC Component</h1>
-    <div>List</div>
-  </>
+const Home = () => (
+  <Link url="http://www.facebook.com">Home</Link>
 )
 
 export default Home
