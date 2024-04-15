@@ -29,7 +29,8 @@ const TextInput = ({
             </label>}
       <input
         id={id}
-        className="w-80 transition duration-200 ease-in-out focus:bg-orange-100 focus:scale-105 text-center"
+        type="text"
+        className="w-80 text-gray-900 transition duration-200 ease-in-out focus:bg-orange-100 focus:scale-105 text-center"
         value={inputState}
         onChange={handleChange}
         placeholder={placeholder}
