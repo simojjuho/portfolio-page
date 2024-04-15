@@ -11,6 +11,9 @@ export default {
         poppins: ['Poppins', 'sans-serif']
       }
     },
+    scale: {
+      '200': '2000%'
+    },
     maxWidth: {
       '1/5': '20%',
       '1/4': '25%',

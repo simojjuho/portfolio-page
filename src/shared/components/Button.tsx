@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 interface ButtonProps {
   name: string
   onClick: () => void
@@ -6,17 +8,26 @@ interface ButtonProps {
 }
 
 const Button = ({name, onClick, isLogo=false, logo}: ButtonProps) => {
+  const [animationVisible, setAnimationVisibility] = useState<string>('w-0 h-0')
+  const buttonAnimationClasses = `${animationVisible} rounded-full m-auto bg-orange-200 opacity-50 transition duration-1000 ease-out group-focus:scale-200`
+  
+  const handleClick = () => {
+    onClick()
+    setAnimationVisibility('w-2 h-2')
+    setTimeout(() => {
+      setAnimationVisibility('w-0 h-0')
+    }, 300)
+  }
+
   return (
     <button
-      className="group relative m-2 text-xl uppercase p-3 border-solid rounded-md shadow-md border-black bg-orange-400 dark:bg-orange-600 transition duration-200 hover:bg-orange-700 active:shadow-none active:bg-orange-800"
-      onClick={onClick}>
+      className="group relative overflow-hidden top m-2 text-xl uppercase p-3 border-solid rounded-md shadow-md border-black bg-orange-400 dark:bg-orange-600 transition duration-200 hover:bg-orange-700 active:shadow-none active:bg-orange-800"
+      onClick={handleClick}>
         {isLogo && <i className={`${logo} mr-2 transition duration-200 ease-in group-hover:scale-125`}></i>}
         {name}
-        <div
-          className="w-0 h-0 bg-orange-200 group-focus:w-full group-focus:h-full absolute opacity-5"
-        >
+        <div className="flex justify-center items-center absolute w-full h-full top-0 left-0">
           <div
-            className="w-0"
+            className={buttonAnimationClasses}
           >
           </div>
         </div>

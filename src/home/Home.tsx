@@ -20,6 +20,12 @@ const Home = () => {
       isLogo={true}
       logo="fa fa-solid fa-info"
     />
+    <Button
+      name={"No! Me!"}
+      onClick={setColorMode}
+      isLogo={true}
+      logo="fa fa-solid fa-info"
+    />
     <TextInput
       handleChange={handleChange}
       label="Text field"
