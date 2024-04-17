@@ -8,7 +8,7 @@ const NavbarItem = ({item}: NavbarItemProps) => {
   const NavbarItemStyle = {
   }
 
-  const linkClasses ='px-5 transition duration-200 ease-in-out hover:bg-orange-500 hover:text-white active:bg-orange-600 active:text-white'
+  const linkClasses ='px-5 transition duration-200 ease-in-out hover:bg-orange-500 dark:hover:bg-orange-600 hover:text-white active:bg-orange-600 active:text-white'
   
   return (
     <li style={NavbarItemStyle}>
