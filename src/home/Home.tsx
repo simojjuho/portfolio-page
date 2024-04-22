@@ -12,8 +12,12 @@ const Home = () => {
   const [isVisible, setVisibility] = useState(false)
   const dispatch = useAppDispatch()
   const setColorMode = () => dispatch(switchColorMode())
-  const handleSwitchVisibility = () => {
-    setVisibility(state => !state)
+  const handleOpenModal = () => {
+    console.log('opening modal')
+    setVisibility(true)
+  }
+  const handleCloseModal = () => {
+    setVisibility(false)
   }
   return (<>
     <h1>Koti</h1>
@@ -28,18 +32,25 @@ const Home = () => {
     />
     <Button
       name={"No! Me!"}
-      onClick={handleSwitchVisibility}
+      onClick={handleOpenModal}
       isLogo={true}
-      logo="fa fa-solid fa-info"
+      logo="fa fa-solid fa-key"
     />
-    <TextInput
-      handleChange={handleChange}
-      label="Text field"
-      placeholder="Placeholder"
-      inputState={state}
-      isLabel={true}
-      id="testingInput"/>
-      <ModalBox isVisible={isVisible} switchVisibility={handleSwitchVisibility}/>
+      {isVisible &&
+      <ModalBox
+        isVisible={isVisible}
+        switchVisibility={handleCloseModal}
+        hasCloseButton={true}
+        >
+        <TextInput
+          handleChange={handleChange}
+          label="Text field"
+          placeholder="Placeholder"
+          inputState={state}
+          isLabel={true}
+          id="testingInput"
+        />    
+      </ModalBox>}
   </>)
 }
 
