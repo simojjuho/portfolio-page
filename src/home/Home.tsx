@@ -13,7 +13,6 @@ const Home = () => {
   const dispatch = useAppDispatch()
   const setColorMode = () => dispatch(switchColorMode())
   const handleOpenModal = () => {
-    console.log('opening modal')
     setVisibility(true)
   }
   const handleCloseModal = () => {

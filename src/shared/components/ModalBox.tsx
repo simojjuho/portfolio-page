@@ -2,7 +2,7 @@ import { PropsWithChildren, useEffect, useRef, useState } from "react"
 import Button from "./Button"
 
 interface ModalBoxProps {
-  isVisible: boolean,
+  isVisible: boolean
   switchVisibility?: () => void
   hasCloseButton?: boolean
 }
@@ -40,7 +40,7 @@ const ModalBox = ({isVisible, switchVisibility, hasCloseButton, children}: Props
   }
 
 return (
-    <div className='w-screen h-screen absolute top-0 left-0 bg-gray-800 bg-opacity-80 flex justify-center items-center'>
+    <div className={`w-screen h-screen absolute top-0 left-0 bg-gray-800 flex justify-center items-center transition-opacity ease-in ${isOpen ? 'opacity-80' : 'opacity-0'} duration-150 `}>
       <dialog ref={modalRef} onKeyDown={handleKeyDown} onClick={e => e.stopPropagation()} className='w-fit h-fit py-8 px-4 bg-gray-500 bg-opacity-100 rounded drop-shadow-lg'>
         {children}
         {hasCloseButton && <Button

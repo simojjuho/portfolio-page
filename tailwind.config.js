@@ -7,6 +7,12 @@ export default {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        'opacity': 'opacity',
+      },
+      duration: {
+        '500': '500ms',
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
       }
