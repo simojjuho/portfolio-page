@@ -5,16 +5,12 @@ interface NavbarItemProps {
 }
 
 const NavbarItem = ({item}: NavbarItemProps) => {
-  const NavbarItemStyle = {
-  }
-
-  const linkClasses ='px-5 transition duration-200 ease-in-out hover:bg-orange-500 dark:hover:bg-orange-600 hover:text-white active:bg-orange-600 active:text-white'
   
   return (
-    <li style={NavbarItemStyle}>
+    <li className = 'px-5 xs:py-2 sm:py-4 md:py-5 xl:py-6 text-2xl transition duration-200 ease-in-out hover:bg-orange-500 dark:hover:bg-orange-600 hover:text-white active:bg-orange-600 active:text-white'>
       {item === 'home'
-        ? <RouterLink className={linkClasses} to={'/'}>home</RouterLink>
-        : <RouterLink className={linkClasses} to={item}>{item}</RouterLink>}
+        ? <RouterLink to={'/'}>home</RouterLink>
+        : <RouterLink to={item}>{item}</RouterLink>}
     </li>
   )
 }

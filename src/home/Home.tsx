@@ -1,5 +1,4 @@
 import Button from "../shared/components/Button"
-import Link from "../shared/components/Link"
 import TextInput from "../shared/components/TextInput"
 import { useAppDispatch } from "../shared/hooks/reduxHooks"
 import { switchColorMode } from "../redux/themeReducer"
@@ -19,10 +18,6 @@ const Home = () => {
     setVisibility(false)
   }
   return (<>
-    <h1>Koti</h1>
-    <Link url="http://www.facebook.com">Home</Link>
-    <br />
-    <br />
     <Button
       name={"Click me!"}
       onClick={setColorMode}
