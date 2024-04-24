@@ -12,9 +12,14 @@ const NavBar = () => {
 
   return(
     <nav className='xl:mx-96 lg:mx-80 md:mx:50'>
-      <ul className='flex flex-col items-end md:flex-row justify-end'>
+      <div className="md:hidden p-2" onClick={() => setAccordion(state => !state)}>
+        <i className="fa fa-solid fa-info"/>
+      </div>
+      {
+      <ul className={`flex transition-height ease-in-out duration-500 ${isAccordionOpen ? 'h-0' : 'h-32'} overflow-hidden items-center flex-col md:flex-row md:justify-end`}>
+        
         {navbarElements.map(e => <NavbarItem key={e} item={e}/>)}
-      </ul>
+      </ul>}
     </nav>
   )
 }

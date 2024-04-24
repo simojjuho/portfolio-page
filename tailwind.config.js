@@ -9,6 +9,8 @@ export default {
     extend: {
       transitionProperty: {
         'opacity': 'opacity',
+        height: 'height',
+
       },
       duration: {
         '500': '500ms',
