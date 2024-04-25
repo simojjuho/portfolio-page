@@ -11,13 +11,20 @@ const NavBar = () => {
   ]
 
   return(
-    <nav className='xl:mx-96 lg:mx-80 md:mx:50'>
-      <div className="md:hidden p-2" onClick={() => setAccordion(state => !state)}>
-        <i className="fa fa-solid fa-info"/>
+    <nav className='xl:mx-96 lg:mx-80 md:mx:50 flex flex-col'>
+      <div className="md:hidden p-4 w-fit self-end" onClick={() => setAccordion(state => !state)}>
+        {isAccordionOpen ? <i className="fa fa-solid fa-close"/> : <i className="fa fa-solid fa-bars"></i>}
       </div>
       {
-      <ul className={`flex transition-height ease-in-out duration-500 ${isAccordionOpen ? 'h-0' : 'h-32'} overflow-hidden items-center flex-col md:flex-row md:justify-end`}>
-        
+      <ul className={`
+        flex
+        md:h-full
+        overflow-hidden 
+        items-center flex-col 
+        md:flex-row md:justify-end
+        transition-height ease-in-out duration-500 
+        ${isAccordionOpen ? 'h-32' : 'h-0'}`
+      }>
         {navbarElements.map(e => <NavbarItem key={e} item={e}/>)}
       </ul>}
     </nav>
