@@ -7,7 +7,7 @@
     @apply dark:text-blue-100
   }
   body {
-    @apply font-poppins
+    @apply font-poppins text-color-text
   }
   h1 {
     @apply text-3xl 
@@ -17,5 +17,20 @@
   }
   h3 {
     @apply text-xl
+  }
+  html {
+    --color-primary: #FCFCFC;
+    --color-primary-light: #FEFEFE;
+    --color-primary-dark: #CCC;
+    --color-secondary: #BBB;
+    --color-secondary-light: #CCC;
+    --color-secondary-dark: #999;
+    --color-text: #1B1B1B;
+    --color-accent-one: #FFAD00;
+    --color-accent-one-dark: #FF760D;
+    --color-accent-one-light: #FFB619;
+    --color-accent-two: #14b1c8;
+    --color-accent-two-dark: #0f8a9b;
+    --color-accent-two-light: #24d0e9;
   }
 }

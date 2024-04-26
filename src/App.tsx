@@ -6,9 +6,9 @@ import { useAppSelector } from "./shared/hooks/reduxHooks"
 
 const App = () => {
   const theme = useAppSelector(store => store.theme.colorMode)
-  const classes = `${theme} h-fit min-h-screen bg-gray-300 dark:bg-gray-700 `
+  const classes = `${theme} h-fit min-h-screen  dark:bg-gray-700 `
   return (
-    <div className={`${classes} overflow-x-hidden relative`}>
+    <div className={`${classes} overflow-x-hidden bg-primary-dark relative`}>
       <RouterProvider  router={router}/>
     </div>
   )

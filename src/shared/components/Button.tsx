@@ -21,7 +21,7 @@ const Button = ({name, onClick, isLogo=false, logo}: ButtonProps) => {
 
   return (
     <button
-      className="group relative overflow-hidden top m-2 text-xl uppercase p-3 border-solid rounded-md shadow-md border-black bg-orange-400 dark:bg-orange-600 transition duration-200 hover:bg-orange-700 active:shadow-none active:bg-orange-800"
+      className="group relative overflow-hidden top m-2 text-xl uppercase p-3 border-solid rounded-md shadow-md border-black bg-accent-one dark:bg-orange-600 transition duration-200 hover:bg-accent-one-dark active:shadow-none"
       onClick={handleClick}>
         {isLogo && <i className={`${logo} mr-2 transition duration-200 ease-in group-hover:scale-125`}></i>}
         {name}
