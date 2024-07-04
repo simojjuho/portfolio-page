@@ -11,8 +11,8 @@ const NavBar = () => {
   ]
 
   return(
-    <nav className='xl:mx-96 lg:mx-80 md:mx:50 flex flex-col'>
-      <div className="md:hidden p-4 w-fit self-end" onClick={() => setAccordion(state => !state)}>
+    <nav className='flex flex-col xl:mx-96 lg:mx-80 md:mx:50'>
+      <div className="self-end p-4 md:hidden w-fit" onClick={() => setAccordion(state => !state)}>
         {isAccordionOpen ? <i className="fa fa-solid fa-close"/> : <i className="fa fa-solid fa-bars"></i>}
       </div>
       {
